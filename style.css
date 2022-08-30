@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Color Variables
+accent     - #01a185
+bg color 1 - #282a3a
+bg color 2 - #121328
+muted      - #747474
+*/
+
+/* 
+    Gradient
+background: -webkit-linear-gradient(180deg, #5c258d, #4389a2);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+*/
+
+:root {
+    --bg-1:  #282a3a;
+    --bg-2:  #121328;
+    --muted: #747474;
+    --minh: 98vh;
+}
+
+
+html { scroll-behavior: smooth; } 
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-1)
+}
+.accent {
+    background: -webkit-linear-gradient(180deg, #5c258d, #4389a2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.muted {
+    color: var(--muted);
+}
+.faded {
+    color: var(--muted);
+    opacity: 5%;
+}
+.bg-1 {
+    background-color: var(--bg-1);
+}
+.bg-2 {
+    background-color: var(--bg-2);
+}
+.hero {
+    background-image: url(img/hero_bg.png);
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+    margin-top: -55px;
+}
+.hero h1 {
+    font-size: 7vw;
+    font-weight: 500;
+}
+.fa-chevron-down {
+    cursor: pointer;
+}
+.title {
+    line-height: 5px;
+}
+.title-bg-text {
+    font-size: 10vw;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    font-weight: 600;
+    position: relative;
+    z-index: 0;
+    opacity: 0%;
+    color: var(--muted)
+}
+.title-text {
+    color: white;
+    text-transform: capitalize;
+    font-weight: 600;
+    position: relative;
+    font-size: 3.2vw;
+    z-index: 1;
+    opacity: 100%;
+}
+.about-btn {
+    background: -webkit-linear-gradient(180deg, #5c258d, #4389a2);
+    padding: 15px 30px;
+    border: none;
+
+}
+.about-btn:hover {
+    background: -webkit-linear-gradient(180deg, #4b1d73, #377186);
+    border: none;
+}
+.form-control {
+    background: #3d3d4b;
+    border: none;
+    font-weight: 500;
+    color: white;
+}
+.form-control:focus {
+    background: #24242c !important;
+    color: white !important;
+}
+
+.form-control {
+    background: #3d3d4b;
+    border: none;
+    font-weight: 500;
+}
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+#mouse-circle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin: -32px 0 0 -32px;
+    border: 3px solid white;
+    border-radius: 50%;
+    pointer-events: none;
+    
+}
+@media only screen and (max-width: 600px) {
+    .hero {
+        height:110%; 
+    }
+    .title-bg-text{
+        font-size: 8vw;
+    }
+    .title-text {
+        font-size: 5.5vw;    
+    }
+    .title {
+        line-height: 5px;
+    }
+    .tiles-big-text {
+        font-size: 4.5vw !important
+    }
+    .tiles-small-text {
+        font-size: 3vw !important
+    }
+    .about-btn {
+        padding: 10px 20px;
+        font-size: 1.8vw;
+    }
+    .marquee{
+        height: 600px !important;
+    }
+}
+ 
+
+
+.bg-fade-in {
+    animation-name: bg-fade-in;
+    animation-duration: .5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes bg-fade-in {
+    from {background: none;box-shadow: 0px 0px;}
+    to   {background: #282a3a;box-shadow: 1px -1px 15px black;}
+}
+.bg-fade-out {
+    animation-name: bg-fade-out;
+    animation-duration: .5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes bg-fade-out {
+    from {background: #282a3a;}
+    to   {background: none;}
+}
+
+
+/* 
+.title-text {
+    color: #666;
+    display: inline-block;
+    margin: 0;
+    text-transform: uppercase;
+    border-bottom: 3px solid lightgray; 
+  }
+  
+  .title-text:after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px #019fb6;
+    margin-bottom:-3px; 
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+  
+  .title-text:hover:after {
+    transform: scaleX(1);
+  }
+  
+  .title-text.fromLeft:after {
+    transform-origin: 0% 50%;
+  } */
